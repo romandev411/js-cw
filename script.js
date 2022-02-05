@@ -12,7 +12,7 @@ function sum(n) {
 
 console.log(sum(2));
 
-console.log('////////////////////////////////////////');
+console.log('1111^^^^^^^////////////////////////////////////////');
 
 // 2.
 // 2.1 Создать объект Student, который содержит следующие свойства: имя, фамилию, пол, контактные данные.
@@ -59,16 +59,6 @@ class Student {
     get info() {
         return this._info;
     }
-
-    get userInfo() {
-        return {
-            name: this.name,
-            surname: this.surname,
-            sex: this.sex,
-            faculty: this.info.faculty,
-            department: this.info.department,
-        };
-    }
 }
 
 class UniversityInfo {
@@ -78,12 +68,24 @@ class UniversityInfo {
     }
 }
 
+function userInfo() {
+    return {
+        name: this.name,
+        surname: this.surname,
+        sex: this.sex,
+        faculty: this.info.faculty,
+        department: this.info.department,
+    };
+}
+
 const stud1 = new Student('user1', 'sername user1', 'male', new UniversityInfo('faculty', 'department'));
+const userInfoAll = userInfo.bind(stud1);
 
 console.log(stud1);
-console.log(stud1.userInfo);
+console.log(userInfoAll());
 
-console.log('////////////////////////////////////////');
+
+console.log('2222^^^^^^^////////////////////////////////////////');
 
 // 3.
 // 3.1 Создать числовой массив и проинициализировать его 25 элементами с помощью случайных чисел.
@@ -155,7 +157,7 @@ class NumberGenerator {
 
 const generator1 = new NumberGenerator(25);
 
-console.log('////////////////////////////////////////');
+console.log('3333^^^^^^^////////////////////////////////////////');
 
 // 4.
 // Создать классы:
@@ -181,3 +183,5 @@ class EBook extends Book{
 
 const ebook1 = new EBook('than man', 'vidmak', '1990+', 'poland', 'fb2', '00001');
 console.log(ebook1);
+
+console.log('4444^^^^^^^////////////////////////////////////////');
